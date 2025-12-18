@@ -1,21 +1,25 @@
-<div class="layout layout--col layout--top layout--center-x p--small">
+<div class="screen">
+  <div class="view view--quadrant">
+    <div class="layout layout--col layout--top layout--center-x">
 
-  <!-- VERY SMALL PERCENTAGE FOR HALF HORIZONTAL -->
-  <div class="value value--medium">
-    {{ urineTankPercentage }}%
-  </div>
-
-  <!-- LABEL -->
-  <div class="label mt--small text--gray-30">
-    ISS URINE TANK LEVEL
-  </div>
-
-  <!-- PROGRESS BAR -->
-  <div class="progress-bar progress-bar--small mt--small w--full">
-    <div class="track">
-      <div class="fill" style="width:{{ urineTankPercentage }}%">
+      <!-- PERCENTAGE -->
+      <div class="value value--large">
+        {{ urineTankPercentage }}%
       </div>
+
+      <!-- LABEL -->
+      <div class="label mt text--gray-30">
+        ISS URINE TANK LEVEL
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar progress-bar--small mt w--full">
+        <div class="track">
+          <div class="fill" style="width:{{ urineTankPercentage }}%">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-
 </div>
