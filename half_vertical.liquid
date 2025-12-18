@@ -1,52 +1,56 @@
 {% assign icon_size = 120 %}
 
-<div class="layout layout--col layout--top layout--center-x p">
+<div class="screen">
+  <div class="view view--half_vertical">
+    <div class="layout layout--col layout--top layout--center-x">
 
-   <!-- REALISTIC ISS SILHOUETTE -->
-<svg
-  width="{{ icon_size }}"
-  height="{{ icon_size | times: 0.6 }}"
-  viewBox="0 0 300 120"
-  fill="black"
-  class="mb"
->
+      <!-- REALISTIC ISS SILHOUETTE -->
+      <svg
+        width="{{ icon_size }}"
+        height="{{ icon_size | times: 0.6 }}"
+        viewBox="0 0 300 120"
+        fill="black"
+        class="mb"
+      >
 
-  <!-- LEFT SOLAR ARRAYS -->
-  <rect x="0" y="45" width="70" height="12"/>
-  <rect x="0" y="65" width="70" height="12"/>
+        <!-- LEFT SOLAR ARRAYS -->
+        <rect x="0" y="45" width="70" height="12"/>
+        <rect x="0" y="65" width="70" height="12"/>
 
-  <!-- RIGHT SOLAR ARRAYS -->
-  <rect x="230" y="45" width="70" height="12"/>
-  <rect x="230" y="65" width="70" height="12"/>
+        <!-- RIGHT SOLAR ARRAYS -->
+        <rect x="230" y="45" width="70" height="12"/>
+        <rect x="230" y="65" width="70" height="12"/>
 
-  <!-- CENTRAL TRUSS -->
-  <rect x="90" y="56" width="120" height="8"/>
+        <!-- CENTRAL TRUSS -->
+        <rect x="90" y="56" width="120" height="8"/>
 
-  <!-- MODULES -->
-  <rect x="120" y="40" width="24" height="40" rx="4"/>
-  <rect x="156" y="40" width="24" height="40" rx="4"/>
+        <!-- MODULES -->
+        <rect x="120" y="40" width="24" height="40" rx="4"/>
+        <rect x="156" y="40" width="24" height="40" rx="4"/>
 
-  <!-- NODE -->
-  <circle cx="150" cy="60" r="10"/>
+        <!-- NODE -->
+        <circle cx="150" cy="60" r="10"/>
 
-</svg>
+      </svg>
 
-  <!-- PERCENTAGE -->
-  <div class="value value--huge">
-    {{ urineTankPercentage }}%
-  </div>
-
-  <!-- LABEL -->
-  <div class="label label--large mt text--gray-30">
-    ISS URINE TANK LEVEL
-  </div>
-
-  <!-- PROGRESS BAR -->
-  <div class="progress-bar mt w--full">
-    <div class="track">
-      <div class="fill" style="width:{{ urineTankPercentage }}%">
+      <!-- PERCENTAGE -->
+      <div class="value value--xxlarge">
+        {{ urineTankPercentage }}%
       </div>
+
+      <!-- LABEL -->
+      <div class="label label--large mt text--gray-30">
+        ISS URINE TANK LEVEL
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar mt w--full">
+        <div class="track">
+          <div class="fill" style="width:{{ urineTankPercentage }}%">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-
 </div>
