@@ -1,0 +1,85 @@
+{% assign percent_size = 180 %}
+{% assign label_size = 48 %}
+{% assign bar_height = 40 %}
+{% assign spacing = 16 %}
+{% assign icon_size = 120 %}
+
+<div style="
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  text-align:center;
+  padding:12px;
+  box-sizing:border-box;
+">
+
+   <!-- REALISTIC ISS SILHOUETTE -->
+<svg
+  width="{{ icon_size }}"
+  height="{{ icon_size | times: 0.6 }}"
+  viewBox="0 0 300 120"
+  fill="black"
+  style="margin-bottom:16px;"
+>
+
+  <!-- LEFT SOLAR ARRAYS -->
+  <rect x="0" y="45" width="70" height="12"/>
+  <rect x="0" y="65" width="70" height="12"/>
+
+  <!-- RIGHT SOLAR ARRAYS -->
+  <rect x="230" y="45" width="70" height="12"/>
+  <rect x="230" y="65" width="70" height="12"/>
+
+  <!-- CENTRAL TRUSS -->
+  <rect x="90" y="56" width="120" height="8"/>
+
+  <!-- MODULES -->
+  <rect x="120" y="40" width="24" height="40" rx="4"/>
+  <rect x="156" y="40" width="24" height="40" rx="4"/>
+
+  <!-- NODE -->
+  <circle cx="150" cy="60" r="10"/>
+
+</svg>
+
+  <!-- PERCENTAGE -->
+  <div style="
+    font-size:{{ percent_size }}px;
+    font-weight:700;
+    line-height:1;
+  ">
+    {{ urineTankPercentage }}%
+  </div>
+
+  <!-- LABEL -->
+  <div style="
+    font-size:{{ label_size }}px;
+    margin-top:{{ spacing }}px;
+    opacity:0.7;
+  ">
+    ISS URINE TANK LEVEL
+  </div>
+
+  <!-- EXTRA SPACING -->
+  <div style="height:{{ spacing }}px;"></div>
+
+  <!-- PROGRESS BAR -->
+  <div style="
+    width:96%;
+    height:{{ bar_height }}px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+  ">
+    <div style="
+      height:100%;
+      width:{{ urineTankPercentage }}%;
+      background:#000;
+    ">
+    </div>
+  </div>
+
+</div>
